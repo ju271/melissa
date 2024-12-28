@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Melissa Gabriela</title>
+    <style>
+         /* Estilo do container do vídeo */
+    .video-container {
+        position: relative;
+        text-align: center;
+        width: 100%;
+        max-width: 600px;
+        margin: 0 auto; /* Centraliza horizontalmente na página */
+    }
+
+    /* Estilo do vídeo */
+    video {
+        width: 100%;
+        display: block;
+        border-radius: 10px; /* Bordas arredondadas, opcional */
+    }
+
+    /* Estilo do botão de Play */
+    .play-button {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        padding: 15px 30px;
+        background-color: orange;
+        color: rgb(0, 0, 0);
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 18px;
+        font-weight: bold; /* Deixa a fonte em negrito */
+        text-transform: uppercase; /* Deixa o texto em maiúsculo */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adiciona um leve sombreado */
+    }
+
+    /* Efeito ao passar o mouse */
+    .play-button:hover {
+        background-color: darkorange;
+    }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #000000;
+            color: #ffffff;
+            margin: 0;
+            padding: 0;
+        }
+
+        .top-banner {
+            background-color: #ff0000;
+            color: #ffffff;
+            text-align: center;
+            padding: 10px;
+            font-size: 16px;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .container {
+            padding: 20px;
+            text-align: center;
+        }
+
+        .headline {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        .images img {
+            width: 100%;
+            max-width: 400px;
+            margin-bottom: 15px;
+            border-radius: 8px;
+        }
+
+        .video {
+            margin: 20px 0;
+        }
+
+        .video video {
+            width: 100%;
+            max-width: 400px;
+            border-radius: 8px;
+        }
+
+        .offer {
+            margin: 20px 0;
+            font-size: 18px;
+            text-align: center;
+        }
+
+        .button {
+            display: inline-block;
+            background-color: #ffa500;
+            color: #000000;
+            padding: 15px 20px;
+            font-size: 16px;
+            font-weight: bold;
+            border: none;
+            border-radius: 8px;
+            text-decoration: none;
+            margin-top: 10px;
+            cursor: pointer;
+            transition: transform 0.2s;
+        }
+
+        .button.pulsate {
+            animation: pulsate 1.5s infinite;
+        }
+
+        @keyframes pulsate {
+            0%, 100% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.1);
+            }
+        
+        }
+
+        
+    </style>
+</head>
+<body>
+    <div class="top-banner">
+        Adquira meu pacote premium hoje e ganhe meu número do <b>Whatsapp!</b>
+    </div>
+
+    <div class="container">
+        <div class="headline">
+            Tenha a oportunidade de me ver peladinh@ agora mesmo! Olha só algumas prévias (⬇️)
+        </div>
+
+        <div class="images">
+            <img src="https://i.postimg.cc/pdZ0Nhxk/01.png" alt="Prévia 1">
+            <img src="https://i.postimg.cc/26926s1Z/02.png" alt="Prévia 2">
+            <img src="https://i.postimg.cc/Hk0z5cJH/03.png" alt="Prévia 3">
+        </div>
+
+        <div class="video-container">
+            <video id="meuVideo">
+                <source src="video.mp4" type="video/mp4">
+                Seu navegador não suporta o elemento de vídeo.
+            </video>
+            <button class="play-button" onclick="togglePlay()">Play</button>
+        </div>
+
+<script>
+    const video = document.getElementById('meuVideo');
+
+    function togglePlay() {
+        if (video.paused || video.ended) {
+            video.play();
+        } else {
+            video.pause();
+        }
+    }
+</script>
+
+
+        <div class="offer">
+            Pacote Básico 30 Fotos e 20 Vídeos - 49,90<br>
+            <a href="#" class="button">QUERO ESTE</a>
+        </div>
+
+        <div class="offer">
+            70 Vídeos + 90 Fotos - 109,90 + Meu Whatsapp + 1 Chamada Grátis Até G0zar<br>
+            <a href="#" class="button pulsate">QUERO ESTE</a>
+        </div>
+    </div>
+</body>
+</html>
